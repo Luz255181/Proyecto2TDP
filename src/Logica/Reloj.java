@@ -36,7 +36,7 @@ public class Reloj extends JLabel
 		horas = minutos = segundos = 0;
 		
 		//agrego todas la imagenes en el arreglo
-		imagenes = new String[] {"/img/0R.png" , "/img/1R.png" , "/img/2R.png" , "/img/3R.png" , "/img/4R.png" , "/img/5R.png" , "/img/6R.png" , "/img/7R.png" , "/img/8R.png" , "/img/9R.png" , "/img/puntos.png"};
+		imagenes = new String[] {"/img/0R.png" , "/img/1R.png" , "/img/2R.png" , "/img/3R.png" , "/img/4R.png" , "/img/5R.png" , "/img/6R.png" , "/img/7R.png" , "/img/8R.png" , "/img/9R.png" , "/img/Puntos.png"};
 		numeros = setImagenes();
 		
 		tiempo = new Timer(1000,new ActionListener() 
@@ -134,8 +134,12 @@ public class Reloj extends JLabel
 	public ImageIcon[] setImagenes() 
 	{		
 		ImageIcon[] toReturn = new ImageIcon[11];
-		for(int i=0; i<11; i++)
+		for(int i=0; i<11; i++) {
+			if(imagenes[i] !=null) {
+			System.err.println(getClass().getResource(imagenes[i]));
 			toReturn[i] = new ImageIcon(getClass().getResource(imagenes[i]));
+		}
+		}
 		return toReturn;
 	}
 	

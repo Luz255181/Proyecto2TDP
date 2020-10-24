@@ -344,9 +344,9 @@ public class GUI extends JFrame {
 				{
 					//Pinta el boton de blanco si es correcto y lo desactiva
 					boton.setBackground(Color.white);
-					boton.setDisabledIcon(ico);
 					boton.setEnabled(false);
 				}
+				boton.setDisabledIcon(ico);
 			}
 			catch(CeldaInvalida | JuegoException h)
 			{
